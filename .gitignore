@@ -1,0 +1,7 @@
+/target
+.env
+data/
+target/
+release/
+src/zed-editor.core
+*.core

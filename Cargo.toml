@@ -1,0 +1,62 @@
+[package]
+name = "basic_monitoring"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Web Framework
+actix-web = "4.4.1"
+actix-files = "0.6.3"
+actix-session = { version = "0.8.0", features = ["cookie-session"] }
+
+# Async Runtime
+tokio = { version = "1.35.1", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+sqlx = { version = "0.7", features = [
+    "runtime-tokio-native-tls",
+    "sqlite",
+    "migrate",
+    "chrono"
+]}
+
+# Auth & Security
+bcrypt = "0.15"
+dotenv = "0.15"
+
+# Date/Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# HTTP Client
+reqwest = { version = "0.11", features = ["json", "native-tls"] }
+
+# Email
+lettre = { version = "0.11.7", features = [
+    "smtp-transport",
+    "tokio1-native-tls",
+    "builder"
+] }
+
+# System Info
+sysinfo = "0.30.5"
+
+# Utils & Helpers
+thiserror = "1.0"
+futures = "0.3"
+lazy_static = "1.4"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+rand = "0.8"
+futures-util = "0.3"
+
+# SSL Certificate Parser
+x509-parser = "0.15"
+
+# Base64 untuk decode (opsional, untuk jika nanti butuh)
+base64 = "0.21"
+
+# PDF Writer
+printpdf = "0.7"
